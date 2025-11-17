@@ -1,0 +1,1893 @@
+{
+  "1": {
+    "canonical": "Old Dominion Monarchs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Old Dominion",
+      "Old Dominion Monarchs"
+    ],
+    "ofp_names": [
+      "OLD DOMINION"
+    ],
+    "warnings": []
+  },
+  "2": {
+    "canonical": "Troy Trojans",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Troy",
+      "Troy Trojans"
+    ],
+    "ofp_names": [
+      "Troy"
+    ],
+    "warnings": []
+  },
+  "3": {
+    "canonical": "Louisville Cardinals",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Louisville",
+      "Louisville Cardinals"
+    ],
+    "ofp_names": [
+      "LOUISVILLE"
+    ],
+    "warnings": []
+  },
+  "4": {
+    "canonical": "Clemson Tigers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Clemson",
+      "Clemson Tigers"
+    ],
+    "ofp_names": [
+      "Clemson"
+    ],
+    "warnings": []
+  },
+  "5": {
+    "canonical": "Oregon Ducks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Oregon",
+      "Oregon Ducks"
+    ],
+    "ofp_names": [
+      "OREGON"
+    ],
+    "warnings": []
+  },
+  "6": {
+    "canonical": "Minnesota Golden Gophers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Minnesota Golden",
+      "Minnesota Golden Gophers"
+    ],
+    "ofp_names": [
+      "MINNESOTA"
+    ],
+    "warnings": []
+  },
+  "7": {
+    "canonical": "UConn Huskies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UConn",
+      "UConn Huskies"
+    ],
+    "ofp_names": [
+      "CONNECTICUT"
+    ],
+    "warnings": [
+      "Low-confidence OFP mapping 'CONNECTICUT' → 'UConn Huskies'"
+    ]
+  },
+  "8": {
+    "canonical": "Air Force Falcons",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Air Force",
+      "Air Force Falcons"
+    ],
+    "ofp_names": [
+      "Air Force"
+    ],
+    "warnings": []
+  },
+  "9": {
+    "canonical": "Cincinnati Bearcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Cincinnati",
+      "Cincinnati Bearcats"
+    ],
+    "ofp_names": [
+      "CINCINNATI",
+      "Cincinnati"
+    ],
+    "warnings": []
+  },
+  "10": {
+    "canonical": "Arizona Wildcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Arizona",
+      "Arizona Wildcats"
+    ],
+    "ofp_names": [
+      "Arizona",
+      "ARIZONA"
+    ],
+    "warnings": []
+  },
+  "11": {
+    "canonical": "Ball State Cardinals",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Ball State",
+      "Ball State Cardinals"
+    ],
+    "ofp_names": [
+      "BALL ST."
+    ],
+    "warnings": [
+      "Low-confidence OFP mapping 'BALL ST.' → 'Ball State Cardinals'"
+    ]
+  },
+  "12": {
+    "canonical": "Eastern Michigan Eagles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Eastern Michigan",
+      "Eastern Michigan Eagles"
+    ],
+    "ofp_names": [
+      "Eastern Mich",
+      "E Mich"
+    ],
+    "warnings": []
+  },
+  "13": {
+    "canonical": "Charlotte 49ers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Charlotte",
+      "Charlotte 49ers"
+    ],
+    "ofp_names": [
+      "CHARLOTTE 49ERS",
+      "CHARLOTTE"
+    ],
+    "warnings": []
+  },
+  "14": {
+    "canonical": "UTSA Roadrunners",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UTSA",
+      "UTSA Roadrunners"
+    ],
+    "ofp_names": [
+      "UTSA"
+    ],
+    "warnings": []
+  },
+  "15": {
+    "canonical": "Indiana Hoosiers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Indiana",
+      "Indiana Hoosiers"
+    ],
+    "ofp_names": [
+      "INDIANA"
+    ],
+    "warnings": []
+  },
+  "16": {
+    "canonical": "Wisconsin Badgers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Wisconsin",
+      "Wisconsin Badgers"
+    ],
+    "ofp_names": [
+      "Wisconsin"
+    ],
+    "warnings": []
+  },
+  "17": {
+    "canonical": "Oklahoma State Cowboys",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Oklahoma State",
+      "Oklahoma State Cowboys"
+    ],
+    "ofp_names": [
+      "Oklahoma St.",
+      "OKLAHOMA ST."
+    ],
+    "warnings": []
+  },
+  "18": {
+    "canonical": "Kansas State Wildcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Kansas State",
+      "Kansas State Wildcats"
+    ],
+    "ofp_names": [
+      "Kansas St."
+    ],
+    "warnings": []
+  },
+  "19": {
+    "canonical": "Northwestern Wildcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Northwestern",
+      "Northwestern Wildcats"
+    ],
+    "ofp_names": [
+      "NORTHWESTERN"
+    ],
+    "warnings": []
+  },
+  "20": {
+    "canonical": "Michigan Wolverines",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Michigan",
+      "Michigan Wolverines"
+    ],
+    "ofp_names": [
+      "Michigan"
+    ],
+    "warnings": []
+  },
+  "21": {
+    "canonical": "Navy Midshipmen",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Navy",
+      "Navy Midshipmen"
+    ],
+    "ofp_names": [
+      "NAVY"
+    ],
+    "warnings": []
+  },
+  "22": {
+    "canonical": "South Florida Bulls",
+    "league": "NCAA",
+    "odds_api_names": [
+      "South Florida",
+      "South Florida Bulls"
+    ],
+    "ofp_names": [
+      "S. Florida",
+      "USF"
+    ],
+    "warnings": []
+  },
+  "23": {
+    "canonical": "Pittsburgh Panthers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Pittsburgh",
+      "Pittsburgh Panthers"
+    ],
+    "ofp_names": [
+      "PITTSBURGH",
+      "PITT"
+    ],
+    "warnings": []
+  },
+  "24": {
+    "canonical": "Notre Dame Fighting Irish",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Notre Dame Fighting",
+      "Notre Dame Fighting Irish"
+    ],
+    "ofp_names": [
+      "Notre Dame",
+      "Notre D.",
+      "Notre D"
+    ],
+    "warnings": []
+  },
+  "25": {
+    "canonical": "Texas A&M Aggies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Texas A&M",
+      "Texas A&M Aggies"
+    ],
+    "ofp_names": [
+      "TEXAS A&M"
+    ],
+    "warnings": []
+  },
+  "26": {
+    "canonical": "South Carolina Gamecocks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "South Carolina",
+      "South Carolina Gamecocks"
+    ],
+    "ofp_names": [
+      "South Carolina",
+      "South Car"
+    ],
+    "warnings": []
+  },
+  "27": {
+    "canonical": "LSU Tigers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "LSU",
+      "LSU Tigers"
+    ],
+    "ofp_names": [
+      "LSU"
+    ],
+    "warnings": []
+  },
+  "28": {
+    "canonical": "Arkansas Razorbacks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Arkansas",
+      "Arkansas Razorbacks"
+    ],
+    "ofp_names": [
+      "Arkansas"
+    ],
+    "warnings": []
+  },
+  "29": {
+    "canonical": "Arizona State Sun Devils",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Arizona State Sun",
+      "Arizona State Sun Devils"
+    ],
+    "ofp_names": [
+      "Arizona St.",
+      "ARIZONA ST.",
+      "ASU"
+    ],
+    "warnings": []
+  },
+  "30": {
+    "canonical": "West Virginia Mountaineers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "West Virginia",
+      "West Virginia Mountaineers"
+    ],
+    "ofp_names": [
+      "West Virginia",
+      "West Vir"
+    ],
+    "warnings": []
+  },
+  "31": {
+    "canonical": "Tulsa Golden Hurricane",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Tulsa Golden",
+      "Tulsa Golden Hurricane"
+    ],
+    "ofp_names": [
+      "TULSA"
+    ],
+    "warnings": []
+  },
+  "32": {
+    "canonical": "Oregon State Beavers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Oregon State",
+      "Oregon State Beavers"
+    ],
+    "ofp_names": [
+      "Oregon St.",
+      "OREGON ST.",
+      "Beavers"
+    ],
+    "warnings": []
+  },
+  "33": {
+    "canonical": "Kentucky Wildcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Kentucky",
+      "Kentucky Wildcats"
+    ],
+    "ofp_names": [],
+    "warnings": []
+  },
+  "34": {
+    "canonical": "Tennessee Tech Golden Eagles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Tennessee Tech Golden",
+      "Tennessee Tech Golden Eagles"
+    ],
+    "ofp_names": [],
+    "warnings": []
+  },
+  "35": {
+    "canonical": "Georgia State Panthers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Georgia State",
+      "Georgia State Panthers"
+    ],
+    "ofp_names": [
+      "GEORGIA ST."
+    ],
+    "warnings": []
+  },
+  "36": {
+    "canonical": "Marshall Thundering Herd",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Marshall Thundering",
+      "Marshall Thundering Herd"
+    ],
+    "ofp_names": [
+      "Marshall"
+    ],
+    "warnings": []
+  },
+  "37": {
+    "canonical": "UAB Blazers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UAB",
+      "UAB Blazers"
+    ],
+    "ofp_names": [
+      "UAB"
+    ],
+    "warnings": []
+  },
+  "38": {
+    "canonical": "North Texas Mean Green",
+    "league": "NCAA",
+    "odds_api_names": [
+      "North Texas Mean",
+      "North Texas Mean Green"
+    ],
+    "ofp_names": [
+      "North Texas",
+      "N Texas"
+    ],
+    "warnings": []
+  },
+  "39": {
+    "canonical": "New Mexico Lobos",
+    "league": "NCAA",
+    "odds_api_names": [
+      "New Mexico",
+      "New Mexico Lobos"
+    ],
+    "ofp_names": [
+      "NEW MEXICO",
+      "NEW MEX"
+    ],
+    "warnings": []
+  },
+  "40": {
+    "canonical": "Colorado State Rams",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Colorado State",
+      "Colorado State Rams"
+    ],
+    "ofp_names": [
+      "Colorado St.",
+      "Colo St"
+    ],
+    "warnings": []
+  },
+  "41": {
+    "canonical": "Missouri State Bears",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Missouri State",
+      "Missouri State Bears"
+    ],
+    "ofp_names": [
+      "MISSOURI STATE"
+    ],
+    "warnings": []
+  },
+  "42": {
+    "canonical": "UTEP Miners",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UTEP",
+      "UTEP Miners"
+    ],
+    "ofp_names": [
+      "UTEP"
+    ],
+    "warnings": []
+  },
+  "43": {
+    "canonical": "Alabama Crimson Tide",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Alabama Crimson",
+      "Alabama Crimson Tide"
+    ],
+    "ofp_names": [
+      "ALABAMA"
+    ],
+    "warnings": []
+  },
+  "44": {
+    "canonical": "Oklahoma Sooners",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Oklahoma",
+      "Oklahoma Sooners"
+    ],
+    "ofp_names": [
+      "Oklahoma"
+    ],
+    "warnings": []
+  },
+  "45": {
+    "canonical": "James Madison Dukes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "James Madison",
+      "James Madison Dukes"
+    ],
+    "ofp_names": [
+      "JAMES MADISON",
+      "J MADISON"
+    ],
+    "warnings": []
+  },
+  "46": {
+    "canonical": "Appalachian State Mountaineers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Appalachian State",
+      "Appalachian State Mountaineers"
+    ],
+    "ofp_names": [
+      "Appalachian State",
+      "App State"
+    ],
+    "warnings": []
+  },
+  "47": {
+    "canonical": "Boston College Eagles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Boston College",
+      "Boston College Eagles"
+    ],
+    "ofp_names": [
+      "BOSTON COLLEGE",
+      "BOSTON COL"
+    ],
+    "warnings": []
+  },
+  "48": {
+    "canonical": "Georgia Tech Yellow Jackets",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Georgia Tech Yellow",
+      "Georgia Tech Yellow Jackets"
+    ],
+    "ofp_names": [
+      "Georgia Tech",
+      "GA Tech"
+    ],
+    "warnings": []
+  },
+  "49": {
+    "canonical": "Duke Blue Devils",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Duke Blue",
+      "Duke Blue Devils"
+    ],
+    "ofp_names": [
+      "DUKE"
+    ],
+    "warnings": []
+  },
+  "50": {
+    "canonical": "Virginia Cavaliers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Virginia",
+      "Virginia Cavaliers"
+    ],
+    "ofp_names": [
+      "Virginia"
+    ],
+    "warnings": []
+  },
+  "51": {
+    "canonical": "Illinois Fighting Illini",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Illinois Fighting",
+      "Illinois Fighting Illini"
+    ],
+    "ofp_names": [
+      "ILLINOIS"
+    ],
+    "warnings": []
+  },
+  "52": {
+    "canonical": "Maryland Terrapins",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Maryland",
+      "Maryland Terrapins"
+    ],
+    "ofp_names": [
+      "Maryland"
+    ],
+    "warnings": []
+  },
+  "53": {
+    "canonical": "USC Trojans",
+    "league": "NCAA",
+    "odds_api_names": [
+      "USC",
+      "USC Trojans"
+    ],
+    "ofp_names": [
+      "USC"
+    ],
+    "warnings": []
+  },
+  "54": {
+    "canonical": "Iowa Hawkeyes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Iowa",
+      "Iowa Hawkeyes"
+    ],
+    "ofp_names": [
+      "Iowa"
+    ],
+    "warnings": []
+  },
+  "55": {
+    "canonical": "Miami Hurricanes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Miami",
+      "Miami Hurricanes"
+    ],
+    "ofp_names": [
+      "MIAMI",
+      "MIAMI FLA"
+    ],
+    "warnings": []
+  },
+  "56": {
+    "canonical": "NC State Wolfpack",
+    "league": "NCAA",
+    "odds_api_names": [
+      "NC State",
+      "NC State Wolfpack"
+    ],
+    "ofp_names": [
+      "No Car St",
+      "No Carolina St.",
+      "NC State"
+    ],
+    "warnings": []
+  },
+  "57": {
+    "canonical": "Michigan State Spartans",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Michigan State",
+      "Michigan State Spartans"
+    ],
+    "ofp_names": [
+      "MICHIGAN ST.",
+      "Michigan St."
+    ],
+    "warnings": []
+  },
+  "58": {
+    "canonical": "Penn State Nittany Lions",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Penn State Nittany",
+      "Penn State Nittany Lions"
+    ],
+    "ofp_names": [
+      "Penn St."
+    ],
+    "warnings": []
+  },
+  "59": {
+    "canonical": "Western Kentucky Hilltoppers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Western Kentucky",
+      "Western Kentucky Hilltoppers"
+    ],
+    "ofp_names": [
+      "WESTERN KENTUCKY",
+      "W KENTUCKY"
+    ],
+    "warnings": []
+  },
+  "60": {
+    "canonical": "Middle Tennessee Blue Raiders",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Middle Tennessee Blue",
+      "Middle Tennessee Blue Raiders"
+    ],
+    "ofp_names": [
+      "Middle Tenn",
+      "Mid Tenn"
+    ],
+    "warnings": []
+  },
+  "61": {
+    "canonical": "Nevada Wolf Pack",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Nevada Wolf",
+      "Nevada Wolf Pack"
+    ],
+    "ofp_names": [
+      "NEVADA"
+    ],
+    "warnings": []
+  },
+  "62": {
+    "canonical": "San Jose State Spartans",
+    "league": "NCAA",
+    "odds_api_names": [
+      "San Jose State",
+      "San Jose State Spartans"
+    ],
+    "ofp_names": [
+      "San Jose St."
+    ],
+    "warnings": []
+  },
+  "63": {
+    "canonical": "UL Monroe Warhawks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UL Monroe",
+      "UL Monroe Warhawks"
+    ],
+    "ofp_names": [
+      "UL MONROE"
+    ],
+    "warnings": []
+  },
+  "64": {
+    "canonical": "South Alabama Jaguars",
+    "league": "NCAA",
+    "odds_api_names": [
+      "South Alabama",
+      "South Alabama Jaguars"
+    ],
+    "ofp_names": [
+      "South Alabama",
+      "South AL"
+    ],
+    "warnings": []
+  },
+  "65": {
+    "canonical": "Southern Mississippi Golden Eagles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Southern Mississippi Golden",
+      "Southern Mississippi Golden Eagles"
+    ],
+    "ofp_names": [
+      "SOUTHERN MISS",
+      "S MISS"
+    ],
+    "warnings": []
+  },
+  "66": {
+    "canonical": "Texas State Bobcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Texas State",
+      "Texas State Bobcats"
+    ],
+    "ofp_names": [
+      "Texas State"
+    ],
+    "warnings": []
+  },
+  "67": {
+    "canonical": "Texas Tech Red Raiders",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Texas Tech Red",
+      "Texas Tech Red Raiders"
+    ],
+    "ofp_names": [
+      "TEXAS TECH"
+    ],
+    "warnings": []
+  },
+  "68": {
+    "canonical": "UCF Knights",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UCF",
+      "UCF Knights"
+    ],
+    "ofp_names": [
+      "UCF"
+    ],
+    "warnings": []
+  },
+  "69": {
+    "canonical": "East Carolina Pirates",
+    "league": "NCAA",
+    "odds_api_names": [
+      "East Carolina",
+      "East Carolina Pirates"
+    ],
+    "ofp_names": [
+      "EAST CAROLINA",
+      "EAST CAR"
+    ],
+    "warnings": []
+  },
+  "70": {
+    "canonical": "Memphis Tigers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Memphis",
+      "Memphis Tigers"
+    ],
+    "ofp_names": [
+      "Memphis"
+    ],
+    "warnings": []
+  },
+  "71": {
+    "canonical": "Tulane Green Wave",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Tulane Green",
+      "Tulane Green Wave"
+    ],
+    "ofp_names": [
+      "TULANE"
+    ],
+    "warnings": []
+  },
+  "72": {
+    "canonical": "Florida Atlantic Owls",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Florida Atlantic",
+      "Florida Atlantic Owls"
+    ],
+    "ofp_names": [
+      "Florida Atl."
+    ],
+    "warnings": []
+  },
+  "73": {
+    "canonical": "Tennessee Volunteers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Tennessee",
+      "Tennessee Volunteers"
+    ],
+    "ofp_names": [
+      "TENNESSEE",
+      "Tennessee"
+    ],
+    "warnings": []
+  },
+  "74": {
+    "canonical": "New Mexico State Aggies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "New Mexico State",
+      "New Mexico State Aggies"
+    ],
+    "ofp_names": [
+      "New Mexico St.",
+      "NM State"
+    ],
+    "warnings": []
+  },
+  "75": {
+    "canonical": "Wake Forest Demon Deacons",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Wake Forest Demon",
+      "Wake Forest Demon Deacons"
+    ],
+    "ofp_names": [
+      "WAKE FOREST",
+      "WAKE"
+    ],
+    "warnings": []
+  },
+  "76": {
+    "canonical": "North Carolina Tar Heels",
+    "league": "NCAA",
+    "odds_api_names": [
+      "North Carolina Tar",
+      "North Carolina Tar Heels"
+    ],
+    "ofp_names": [
+      "North Carolina",
+      "N Carolina"
+    ],
+    "warnings": []
+  },
+  "77": {
+    "canonical": "FIU Panthers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "FIU",
+      "FIU Panthers",
+      "Florida International Panthers"
+    ],
+    "ofp_names": [
+      "FIU"
+    ],
+    "warnings": []
+  },
+  "78": {
+    "canonical": "Liberty Flames",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Liberty",
+      "Liberty Flames"
+    ],
+    "ofp_names": [
+      "Liberty"
+    ],
+    "warnings": []
+  },
+  "79": {
+    "canonical": "Georgia Southern Eagles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Georgia Southern",
+      "Georgia Southern Eagles"
+    ],
+    "ofp_names": [
+      "GEORGIA SOUTHERN",
+      "GEORGIA S"
+    ],
+    "warnings": []
+  },
+  "80": {
+    "canonical": "Coastal Carolina Chanticleers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Coastal Carolina",
+      "Coastal Carolina Chanticleers"
+    ],
+    "ofp_names": [
+      "Coastal Carolina",
+      "Coastal"
+    ],
+    "warnings": []
+  },
+  "81": {
+    "canonical": "Baylor Bears",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Baylor",
+      "Baylor Bears"
+    ],
+    "ofp_names": [
+      "BAYLOR"
+    ],
+    "warnings": []
+  },
+  "82": {
+    "canonical": "Utah Utes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Utah",
+      "Utah Utes"
+    ],
+    "ofp_names": [
+      "Utah"
+    ],
+    "warnings": []
+  },
+  "83": {
+    "canonical": "Sam Houston State Bearkats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Sam Houston State",
+      "Sam Houston State Bearkats"
+    ],
+    "ofp_names": [
+      "SAM HOUSTON STATE",
+      "SAM HOUSTON"
+    ],
+    "warnings": []
+  },
+  "84": {
+    "canonical": "Delaware Blue Hens",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Delaware Blue",
+      "Delaware Blue Hens"
+    ],
+    "ofp_names": [
+      "Delaware"
+    ],
+    "warnings": []
+  },
+  "85": {
+    "canonical": "Ole Miss Rebels",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Ole Miss",
+      "Ole Miss Rebels"
+    ],
+    "ofp_names": [
+      "MISSISSIPPI"
+    ],
+    "warnings": []
+  },
+  "86": {
+    "canonical": "Florida Gators",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Florida",
+      "Florida Gators"
+    ],
+    "ofp_names": [
+      "Florida",
+      "FLORIDA"
+    ],
+    "warnings": []
+  },
+  "87": {
+    "canonical": "Washington Huskies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Washington",
+      "Washington Huskies"
+    ],
+    "ofp_names": [
+      "WASHINGTON",
+      "HUSKIES"
+    ],
+    "warnings": []
+  },
+  "88": {
+    "canonical": "Purdue Boilermakers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Purdue",
+      "Purdue Boilermakers"
+    ],
+    "ofp_names": [
+      "Purdue"
+    ],
+    "warnings": []
+  },
+  "89": {
+    "canonical": "UNLV Rebels",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UNLV",
+      "UNLV Rebels"
+    ],
+    "ofp_names": [
+      "UNLV"
+    ],
+    "warnings": []
+  },
+  "90": {
+    "canonical": "Utah State Aggies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Utah State",
+      "Utah State Aggies"
+    ],
+    "ofp_names": [
+      "UTAH ST."
+    ],
+    "warnings": []
+  },
+  "91": {
+    "canonical": "Florida State Seminoles",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Florida State",
+      "Florida State Seminoles"
+    ],
+    "ofp_names": [
+      "FLORIDA ST."
+    ],
+    "warnings": []
+  },
+  "92": {
+    "canonical": "Virginia Tech Hokies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Virginia Tech",
+      "Virginia Tech Hokies"
+    ],
+    "ofp_names": [
+      "Virginia Tech",
+      "VA Tech"
+    ],
+    "warnings": []
+  },
+  "93": {
+    "canonical": "Georgia Bulldogs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Georgia",
+      "Georgia Bulldogs"
+    ],
+    "ofp_names": [
+      "GEORGIA"
+    ],
+    "warnings": []
+  },
+  "94": {
+    "canonical": "Texas Longhorns",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Texas",
+      "Texas Longhorns"
+    ],
+    "ofp_names": [
+      "Texas"
+    ],
+    "warnings": []
+  },
+  "95": {
+    "canonical": "Ohio State Buckeyes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Ohio State",
+      "Ohio State Buckeyes"
+    ],
+    "ofp_names": [
+      "OHIO ST."
+    ],
+    "warnings": []
+  },
+  "96": {
+    "canonical": "UCLA Bruins",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UCLA",
+      "UCLA Bruins"
+    ],
+    "ofp_names": [
+      "UCLA"
+    ],
+    "warnings": []
+  },
+  "97": {
+    "canonical": "Missouri Tigers",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Missouri",
+      "Missouri Tigers"
+    ],
+    "ofp_names": [
+      "MISSOURI"
+    ],
+    "warnings": []
+  },
+  "98": {
+    "canonical": "Mississippi State Bulldogs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Mississippi State",
+      "Mississippi State Bulldogs"
+    ],
+    "ofp_names": [
+      "MISSISSIPPI ST.",
+      "Miss St"
+    ],
+    "warnings": []
+  },
+  "99": {
+    "canonical": "Jacksonville State Gamecocks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Jacksonville State",
+      "Jacksonville State Gamecocks"
+    ],
+    "ofp_names": [
+      "JACKSONVILLE STATE",
+      "JACK STATE"
+    ],
+    "warnings": []
+  },
+  "100": {
+    "canonical": "Kennesaw State Owls",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Kennesaw State",
+      "Kennesaw State Owls"
+    ],
+    "ofp_names": [
+      "Kennesaw St.",
+      "Kennesaw"
+    ],
+    "warnings": []
+  },
+  "101": {
+    "canonical": "Washington State Cougars",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Washington State",
+      "Washington State Cougars"
+    ],
+    "ofp_names": [
+      "WASHINGTON ST.",
+      "WASH ST"
+    ],
+    "warnings": []
+  },
+  "102": {
+    "canonical": "Louisiana Tech Bulldogs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Louisiana Tech",
+      "Louisiana Tech Bulldogs"
+    ],
+    "ofp_names": [
+      "Louisiana Tech",
+      "LA Tech"
+    ],
+    "warnings": []
+  },
+  "103": {
+    "canonical": "BYU Cougars",
+    "league": "NCAA",
+    "odds_api_names": [
+      "BYU",
+      "BYU Cougars"
+    ],
+    "ofp_names": [
+      "BYU"
+    ],
+    "warnings": []
+  },
+  "104": {
+    "canonical": "TCU Horned Frogs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "TCU Horned",
+      "TCU Horned Frogs"
+    ],
+    "ofp_names": [
+      "TCU"
+    ],
+    "warnings": []
+  },
+  "105": {
+    "canonical": "San Diego State Aztecs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "San Diego State",
+      "San Diego State Aztecs"
+    ],
+    "ofp_names": [
+      "SAN DIEGO ST."
+    ],
+    "warnings": []
+  },
+  "106": {
+    "canonical": "Boise State Broncos",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Boise State",
+      "Boise State Broncos"
+    ],
+    "ofp_names": [
+      "Boise St."
+    ],
+    "warnings": []
+  },
+  "107": {
+    "canonical": "Fresno State Bulldogs",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Fresno State",
+      "Fresno State Bulldogs"
+    ],
+    "ofp_names": [
+      "FRESNO ST."
+    ],
+    "warnings": []
+  },
+  "108": {
+    "canonical": "Wyoming Cowboys",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Wyoming",
+      "Wyoming Cowboys"
+    ],
+    "ofp_names": [
+      "Wyoming"
+    ],
+    "warnings": []
+  },
+  "109": {
+    "canonical": "Northern Illinois Huskies",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Northern Illinois",
+      "Northern Illinois Huskies"
+    ],
+    "ofp_names": [
+      "Northern Ill"
+    ],
+    "warnings": []
+  },
+  "110": {
+    "canonical": "Western Michigan Broncos",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Western Michigan",
+      "Western Michigan Broncos"
+    ],
+    "ofp_names": [
+      "WESTERN MICH"
+    ],
+    "warnings": []
+  },
+  "111": {
+    "canonical": "Ohio Bobcats",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Ohio",
+      "Ohio Bobcats"
+    ],
+    "ofp_names": [
+      "Ohio"
+    ],
+    "warnings": []
+  },
+  "112": {
+    "canonical": "UMass Minutemen",
+    "league": "NCAA",
+    "odds_api_names": [
+      "UMass",
+      "UMass Minutemen"
+    ],
+    "ofp_names": [
+      "MASSACHUSETTS",
+      "MASS"
+    ],
+    "warnings": []
+  },
+  "113": {
+    "canonical": "Buffalo Bulls",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Buffalo",
+      "Buffalo Bulls"
+    ],
+    "ofp_names": [
+      "Buffalo"
+    ],
+    "warnings": []
+  },
+  "114": {
+    "canonical": "Miami (OH) RedHawks",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Miami (OH)",
+      "Miami (OH) RedHawks"
+    ],
+    "ofp_names": [
+      "MIAMI OHIO",
+      "MIAMI OH"
+    ],
+    "warnings": []
+  },
+  "115": {
+    "canonical": "Kent State Golden Flashes",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Kent State Golden",
+      "Kent State Golden Flashes"
+    ],
+    "ofp_names": [
+      "Kent State"
+    ],
+    "warnings": []
+  },
+  "116": {
+    "canonical": "Central Michigan Chippewas",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Central Michigan",
+      "Central Michigan Chippewas"
+    ],
+    "ofp_names": [
+      "CENTRAL MICH"
+    ],
+    "warnings": []
+  },
+  "117": {
+    "canonical": "Hawaii Rainbow Warriors",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Hawaii Rainbow",
+      "Hawaii Rainbow Warriors"
+    ],
+    "ofp_names": [
+      "Hawaii"
+    ],
+    "warnings": []
+  },
+  "118": {
+    "canonical": "Vanderbilt Commodores",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Vanderbilt",
+      "Vanderbilt Commodores"
+    ],
+    "ofp_names": [
+      "Vanderbilt"
+    ],
+    "warnings": []
+  },
+  "119": {
+    "canonical": "Syracuse Orange",
+    "league": "NCAA",
+    "odds_api_names": [
+      "Syracuse",
+      "Syracuse Orange"
+    ],
+    "ofp_names": [
+      "Syracuse"
+    ],
+    "warnings": []
+  },
+  "120": {
+    "canonical": "New England Patriots",
+    "league": "NFL",
+    "odds_api_names": [
+      "New England",
+      "New England Patriots"
+    ],
+    "ofp_names": [
+      "NEW ENGLAND",
+      "PATRIOTS"
+    ],
+    "warnings": []
+  },
+  "121": {
+    "canonical": "New York Jets",
+    "league": "NFL",
+    "odds_api_names": [
+      "New York",
+      "New York Jets"
+    ],
+    "ofp_names": [
+      "NY JETS",
+      "Jets"
+    ],
+    "warnings": []
+  },
+  "122": {
+    "canonical": "Miami Dolphins",
+    "league": "NFL",
+    "odds_api_names": [
+      "Miami",
+      "Miami Dolphins"
+    ],
+    "ofp_names": [
+      "MIAMI"
+    ],
+    "warnings": []
+  },
+  "123": {
+    "canonical": "Washington Commanders",
+    "league": "NFL",
+    "odds_api_names": [
+      "Washington",
+      "Washington Commanders"
+    ],
+    "ofp_names": [
+      "Wash"
+    ],
+    "warnings": []
+  },
+  "124": {
+    "canonical": "Atlanta Falcons",
+    "league": "NFL",
+    "odds_api_names": [
+      "Atlanta",
+      "Atlanta Falcons"
+    ],
+    "ofp_names": [
+      "ATLANTA",
+      "Falcons"
+    ],
+    "warnings": []
+  },
+  "125": {
+    "canonical": "Carolina Panthers",
+    "league": "NFL",
+    "odds_api_names": [
+      "Carolina",
+      "Carolina Panthers"
+    ],
+    "ofp_names": [
+      "CAROLINA",
+      "Panthers"
+    ],
+    "warnings": []
+  },
+  "126": {
+    "canonical": "Buffalo Bills",
+    "league": "NFL",
+    "odds_api_names": [
+      "Buffalo",
+      "Buffalo Bills"
+    ],
+    "ofp_names": [
+      "BUFFALO",
+      "Bills"
+    ],
+    "warnings": []
+  },
+  "127": {
+    "canonical": "Tampa Bay Buccaneers",
+    "league": "NFL",
+    "odds_api_names": [
+      "Tampa Bay",
+      "Tampa Bay Buccaneers"
+    ],
+    "ofp_names": [
+      "TAMPA BAY",
+      "Tampa",
+      "Buccaneers"
+    ],
+    "warnings": []
+  },
+  "128": {
+    "canonical": "Minnesota Vikings",
+    "league": "NFL",
+    "odds_api_names": [
+      "Minnesota",
+      "Minnesota Vikings"
+    ],
+    "ofp_names": [
+      "Vikings"
+    ],
+    "warnings": []
+  },
+  "129": {
+    "canonical": "Chicago Bears",
+    "league": "NFL",
+    "odds_api_names": [
+      "Chicago",
+      "Chicago Bears"
+    ],
+    "ofp_names": [
+      "CHICAGO",
+      "Bears"
+    ],
+    "warnings": []
+  },
+  "130": {
+    "canonical": "Pittsburgh Steelers",
+    "league": "NFL",
+    "odds_api_names": [
+      "Pittsburgh",
+      "Pittsburgh Steelers"
+    ],
+    "ofp_names": [
+      "STEELERS"
+    ],
+    "warnings": [
+      "OFP also uses 'PITTSBURGH' for NCAA Panthers; league disambiguation required in code."
+    ]
+  },
+  "131": {
+    "canonical": "Cincinnati Bengals",
+    "league": "NFL",
+    "odds_api_names": [
+      "Cincinnati",
+      "Cincinnati Bengals"
+    ],
+    "ofp_names": [
+      "Cincy",
+      "Bengals"
+    ],
+    "warnings": []
+  },
+  "132": {
+    "canonical": "New York Giants",
+    "league": "NFL",
+    "odds_api_names": [
+      "New York",
+      "New York Giants"
+    ],
+    "ofp_names": [
+      "NY GIANTS",
+      "Giants"
+    ],
+    "warnings": []
+  },
+  "133": {
+    "canonical": "Green Bay Packers",
+    "league": "NFL",
+    "odds_api_names": [
+      "Green Bay",
+      "Green Bay Packers"
+    ],
+    "ofp_names": [
+      "GREEN BAY",
+      "Packers"
+    ],
+    "warnings": []
+  },
+  "134": {
+    "canonical": "Tennessee Titans",
+    "league": "NFL",
+    "odds_api_names": [
+      "Tennessee",
+      "Tennessee Titans"
+    ],
+    "ofp_names": [
+      "Titans"
+    ],
+    "warnings": []
+  },
+  "135": {
+    "canonical": "Houston Texans",
+    "league": "NFL",
+    "odds_api_names": [
+      "Houston",
+      "Houston Texans"
+    ],
+    "ofp_names": [
+      "HOUSTON",
+      "Texans"
+    ],
+    "warnings": []
+  },
+  "136": {
+    "canonical": "Jacksonville Jaguars",
+    "league": "NFL",
+    "odds_api_names": [
+      "Jacksonville",
+      "Jacksonville Jaguars"
+    ],
+    "ofp_names": [
+      "JACKSONVILLE",
+      "JAGUARS"
+    ],
+    "warnings": []
+  },
+  "137": {
+    "canonical": "Los Angeles Chargers",
+    "league": "NFL",
+    "odds_api_names": [
+      "Los Angeles",
+      "Los Angeles Chargers"
+    ],
+    "ofp_names": [
+      "LA CHARGERS",
+      "Chargers"
+    ],
+    "warnings": []
+  },
+  "138": {
+    "canonical": "Arizona Cardinals",
+    "league": "NFL",
+    "odds_api_names": [
+      "Arizona",
+      "Arizona Cardinals"
+    ],
+    "ofp_names": [],
+    "warnings": [
+      "Deliberately left without 'Arizona' to avoid conflict with NCAA Arizona Wildcats."
+    ]
+  },
+  "139": {
+    "canonical": "San Francisco 49ers",
+    "league": "NFL",
+    "odds_api_names": [
+      "San Francisco",
+      "San Francisco 49ers"
+    ],
+    "ofp_names": [
+      "SAN FRANCISCO",
+      "SF 49ers"
+    ],
+    "warnings": []
+  },
+  "140": {
+    "canonical": "Los Angeles Rams",
+    "league": "NFL",
+    "odds_api_names": [
+      "Los Angeles",
+      "Los Angeles Rams"
+    ],
+    "ofp_names": [
+      "LA RAMS",
+      "Rams"
+    ],
+    "warnings": []
+  },
+  "141": {
+    "canonical": "Seattle Seahawks",
+    "league": "NFL",
+    "odds_api_names": [
+      "Seattle",
+      "Seattle Seahawks"
+    ],
+    "ofp_names": [
+      "SEATTLE",
+      "Seahawks"
+    ],
+    "warnings": []
+  },
+  "142": {
+    "canonical": "Cleveland Browns",
+    "league": "NFL",
+    "odds_api_names": [
+      "Cleveland",
+      "Cleveland Browns"
+    ],
+    "ofp_names": [
+      "CLEVELAND",
+      "Browns"
+    ],
+    "warnings": []
+  },
+  "143": {
+    "canonical": "Baltimore Ravens",
+    "league": "NFL",
+    "odds_api_names": [
+      "Baltimore",
+      "Baltimore Ravens"
+    ],
+    "ofp_names": [
+      "BALTIMORE",
+      "Ravens"
+    ],
+    "warnings": []
+  },
+  "144": {
+    "canonical": "Denver Broncos",
+    "league": "NFL",
+    "odds_api_names": [
+      "Denver",
+      "Denver Broncos"
+    ],
+    "ofp_names": [
+      "DENVER",
+      "Broncos"
+    ],
+    "warnings": []
+  },
+  "145": {
+    "canonical": "Kansas City Chiefs",
+    "league": "NFL",
+    "odds_api_names": [
+      "Kansas City",
+      "Kansas City Chiefs"
+    ],
+    "ofp_names": [
+      "KANSAS CITY",
+      "Chiefs"
+    ],
+    "warnings": []
+  },
+  "146": {
+    "canonical": "Philadelphia Eagles",
+    "league": "NFL",
+    "odds_api_names": [
+      "Philadelphia",
+      "Philadelphia Eagles"
+    ],
+    "ofp_names": [
+      "PHILADELPHIA",
+      "PHILLY",
+      "Eagles"
+    ],
+    "warnings": []
+  },
+  "147": {
+    "canonical": "Detroit Lions",
+    "league": "NFL",
+    "odds_api_names": [
+      "Detroit",
+      "Detroit Lions"
+    ],
+    "ofp_names": [
+      "DETROIT",
+      "Lions"
+    ],
+    "warnings": []
+  },
+  "148": {
+    "canonical": "Las Vegas Raiders",
+    "league": "NFL",
+    "odds_api_names": [
+      "Las Vegas",
+      "Las Vegas Raiders"
+    ],
+    "ofp_names": [
+      "LAS VEGAS",
+      "Raiders"
+    ],
+    "warnings": []
+  },
+  "149": {
+    "canonical": "Dallas Cowboys",
+    "league": "NFL",
+    "odds_api_names": [
+      "Dallas",
+      "Dallas Cowboys"
+    ],
+    "ofp_names": [
+      "DALLAS",
+      "Cowboys"
+    ],
+    "warnings": []
+  },
+  "150": {
+    "canonical": "Indianapolis Colts",
+    "league": "NFL",
+    "odds_api_names": [
+      "Indianapolis",
+      "Indianapolis Colts"
+    ],
+    "ofp_names": [
+      "INDIANAPOLIS",
+      "Colts"
+    ],
+    "warnings": []
+  },
+  "151": {
+    "canonical": "New Orleans Saints",
+    "league": "NFL",
+    "odds_api_names": [
+      "New Orleans",
+      "New Orleans Saints"
+    ],
+    "ofp_names": [
+      "NEW ORLEANS",
+      "Saints"
+    ],
+    "warnings": []
+  }
+}
