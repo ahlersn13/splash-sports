@@ -101,7 +101,6 @@
     "canonical": "Cincinnati Bearcats",
     "league": "NCAA",
     "odds_api_names": [
-      "Cincinnati",
       "Cincinnati Bearcats"
     ],
     "ofp_names": [
@@ -146,7 +145,8 @@
     ],
     "ofp_names": [
       "Eastern Mich",
-      "E Mich"
+      "E Mich",
+      "EASTERN MICH"
     ],
     "warnings": []
   },
@@ -260,19 +260,23 @@
     ],
     "warnings": []
   },
-  "22": {
-    "canonical": "South Florida Bulls",
-    "league": "NCAA",
-    "odds_api_names": [
-      "South Florida",
-      "South Florida Bulls"
-    ],
-    "ofp_names": [
-      "S. Florida",
-      "USF"
-    ],
-    "warnings": []
-  },
+"22": {
+  "canonical": "South Florida Bulls",
+  "league": "NCAA",
+  "odds_api_names": [
+    "South Florida",
+    "South Florida Bulls",
+    "S Florida",
+    "S. Florida",
+    "USF"
+  ],
+  "ofp_names": [
+    "S. FLORIDA",
+    "S FLORIDA",
+    "USF"
+  ],
+  "warnings": []
+},
   "23": {
     "canonical": "Pittsburgh Panthers",
     "league": "NCAA",
@@ -409,7 +413,7 @@
       "Kentucky",
       "Kentucky Wildcats"
     ],
-    "ofp_names": [],
+    "ofp_names": ["Kentucky"],
     "warnings": []
   },
   "34": {
@@ -1622,12 +1626,12 @@
     "canonical": "Cincinnati Bengals",
     "league": "NFL",
     "odds_api_names": [
-      "Cincinnati",
       "Cincinnati Bengals"
     ],
     "ofp_names": [
       "Cincy",
-      "Bengals"
+      "Bengals",
+      "CINCINNATI"
     ],
     "warnings": []
   },
@@ -1889,5 +1893,179 @@
       "Saints"
     ],
     "warnings": []
-  }
+  },
+  "152": {
+  "canonical": "Bowling Green Falcons",
+  "league": "NCAA",
+  "odds_api_names": ["Bowling Green", "Bowling Green Falcons"],
+  "ofp_names": ["Bowling Green"],
+  "warnings": []
+  },
+  "153": {
+  "canonical": "Nebraska Cornhuskers",
+  "league": "NCAA",
+  "odds_api_names": ["Nebraska", "Nebraska Cornhuskers"],
+  "ofp_names": ["NEBRASKA"],
+  "warnings": []
+},
+"154": {
+  "canonical": "Kansas Jayhawks",
+  "league": "NCAA",
+  "odds_api_names": ["Kansas", "Kansas Jayhawks"],
+  "ofp_names": ["KANSAS"],
+  "warnings": []
+},
+"155": {
+  "canonical": "Temple Owls",
+  "league": "NCAA",
+  "odds_api_names": ["Temple", "Temple Owls"],
+  "ofp_names": ["Temple"],
+  "warnings": []
+},
+"156": {
+  "canonical": "Houston Cougars",
+  "league": "NCAA",
+  "odds_api_names": ["Houston", "Houston Cougars"],
+  "ofp_names": ["Houston"],
+  "warnings": []
+},
+"157": {
+  "canonical": "Colorado Buffaloes",
+  "league": "NCAA",
+  "odds_api_names": ["Colorado", "Colorado Buffaloes"],
+  "ofp_names": ["Colorado"],
+  "warnings": []
+},
+"158": {
+  "canonical": "Army Black Knights",
+  "league": "NCAA",
+  "odds_api_names": ["Army", "Army Black Knights"],
+  "ofp_names": ["Army"],
+  "warnings": []
+},
+"159": {
+  "canonical": "Rutgers Scarlet Knights",
+  "league": "NCAA",
+  "odds_api_names": ["Rutgers", "Rutgers Scarlet Knights"],
+  "ofp_names": ["RUTGERS"],
+  "warnings": []
+},
+"160": {
+  "canonical": "Louisiana Ragin' Cajuns",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Louisiana",
+    "Louisiana Ragin Cajuns",
+    "Louisiana Ragin' Cajuns"
+  ],
+  "ofp_names": [
+    "UL LAFAYETTE",
+    "LOUISIANA",
+    "LA LAFAYETTE",
+    "UL-LAFAYETTE",
+    "ULL"
+  ],
+  "warnings": []
+},
+"161": {
+  "canonical": "SMU Mustangs",
+  "league": "NCAA",
+  "odds_api_names": [
+    "SMU",
+    "SMU Mustangs"
+  ],
+  "ofp_names": [
+    "smu"
+  ],
+  "warnings": []
+},
+
+"162": {
+  "canonical": "Stanford Cardinal",
+  "league": "NCAA",
+  "odds_api_names": ["Stanford", "Stanford Cardinal"],
+  "ofp_names": ["STANFORD"],
+  "warnings": []
+},
+"163": {
+  "canonical": "Iowa State Cyclones",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Iowa State",
+    "Iowa St.",
+    "Iowa State Cyclones"
+  ],
+  "ofp_names": [
+    "Iowa St.",
+    "Iowa State"
+  ],
+  "warnings": []
+},
+
+"164": {
+  "canonical": "Arkansas State Red Wolves",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Arkansas State",
+    "Arkansas State Red Wolves"
+  ],
+  "ofp_names": [
+    "Arkansas St.",
+    "Arkansas State"
+  ],
+  "warnings": []
+},
+
+"165": {
+  "canonical": "Rice Owls",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Rice",
+    "Rice Owls"
+  ],
+  "ofp_names": [
+    "Rice"
+  ],
+  "warnings": []
+},
+
+"166": {
+  "canonical": "Auburn Tigers",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Auburn",
+    "Auburn Tigers"
+  ],
+  "ofp_names": [
+    "AUBURN",
+    "Auburn"
+  ],
+  "warnings": []
+},
+
+"168": {
+  "canonical": "California Golden Bears",
+  "league": "NCAA",
+  "odds_api_names": [
+    "California",
+    "California Golden Bears"
+  ],
+  "ofp_names": [
+    "california"
+  ],
+  "warnings": []
+},
+
+"169": {
+  "canonical": "Toledo Rockets",
+  "league": "NCAA",
+  "odds_api_names": [
+    "Toledo",
+    "Toledo Rockets"
+  ],
+  "ofp_names": [
+    "Toledo"
+  ],
+  "warnings": []
+}
 }

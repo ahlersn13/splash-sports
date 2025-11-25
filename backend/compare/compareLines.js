@@ -24,11 +24,11 @@ console.log("Master map keys:", Object.keys(masterMap));
 function normalizeTeamName(name) {
   if (!name) return "";
   return name
-    .replace(/#\d+\s*/g, "")            // remove rankings (#9)
-    .replace(/\(\d+-\d+\)/g, "")        // remove records (7-2)
-    .replace(/[+–-]\d+(\.\d+)?/g, "")   // remove spreads like +7.5 or -3
-    .replace(/\./g, "")                 // remove dots
-    .replace(/\s+/g, " ")               // normalize spaces
+    .replace(/#\d+\s*/g, "")                 // remove rankings (#9)
+    .replace(/\([^)]*\)/g, "")               // remove ANYTHING inside parentheses
+    .replace(/[+–-]\d+(\.\d+)?/g, "")         // remove spreads like +7.5 or -3
+    .replace(/\./g, "")                      // remove dots
+    .replace(/\s+/g, " ")                    // normalize spaces
     .trim()
     .toLowerCase();
 }
@@ -142,6 +142,38 @@ function extractAveragedTotal(game) {
   return sum / totals.length;
 }
 
+function matchTeamNameToLeague(rawName, league) {
+  const norm = normalizeTeamName(rawName);
+
+  // Loop through master map and only consider teams of this league
+  for (const id in teamsById) {
+    const team = teamsById[id];
+    if (team.league !== league) continue;
+
+    const canonical = normalizeTeamName(team.canonical);
+    if (canonical === norm) return id;
+
+    if (team.ofp_names.some(n => normalizeTeamName(n) === norm)) return id;
+    if (team.odds_api_names.some(n => normalizeTeamName(n) === norm)) return id;
+  }
+
+  return null;
+}
+
+function detectLeague(raw1, raw2) {
+  const nfl1 = matchTeamNameToLeague(raw1, "NFL");
+  const nfl2 = matchTeamNameToLeague(raw2, "NFL");
+
+  if (nfl1 && nfl2) return "NFL";
+
+  const ncaa1 = matchTeamNameToLeague(raw1, "NCAA");
+  const ncaa2 = matchTeamNameToLeague(raw2, "NCAA");
+
+  if (ncaa1 && ncaa2) return "NCAA";
+
+  return null; // mixed leagues or unmatched
+}
+
 // ----------------------
 // Compare Lines
 // ----------------------
@@ -177,15 +209,23 @@ async function compareLines(getOFPBaseLines) {
       }
 
       // From scraper: team1 = away, team2 = home
-      const ofpAwayId = getOFPTeamId(ofpGame.team1);
-      const ofpHomeId = getOFPTeamId(ofpGame.team2);
+     const league = detectLeague(ofpGame.team1, ofpGame.team2);
 
-      if (!ofpAwayId || !ofpHomeId) {
-        console.warn(
-          `⚠️ Could not map OFP teams to IDs: "${ofpGame.team1}" (${ofpAwayId}), "${ofpGame.team2}" (${ofpHomeId})`
-        );
-        continue;
-      }
+if (!league) {
+  console.warn(`⚠️ Could not determine league for OFP teams: "${ofpGame.team1}" vs "${ofpGame.team2}"`);
+  continue;
+}
+
+// Now map teams using league-specific name lookup
+const ofpAwayId = matchTeamNameToLeague(ofpGame.team1, league);
+const ofpHomeId = matchTeamNameToLeague(ofpGame.team2, league);
+
+if (!ofpAwayId || !ofpHomeId) {
+  console.warn(
+    `⚠️ Could not map OFP teams within league ${league}: "${ofpGame.team1}" (${ofpAwayId}), "${ofpGame.team2}" (${ofpHomeId})`
+  );
+  continue;
+}
 
       let match = null;
       let orientation = null; // "normal" or "reversed"
