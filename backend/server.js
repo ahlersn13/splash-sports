@@ -14,6 +14,13 @@ app.use(express.json());
 
 const PUPPETEER_PROFILE = path.join(__dirname, "puppeteer_profile");
 
+// The contest/entry URL changes week to week (and possibly season to
+// season). Set SPLASH_PICKS_URL in backend/.env to override without
+// touching code. Falls back to the URL you're currently using.
+const SPLASH_PICKS_URL =
+  process.env.SPLASH_PICKS_URL ||
+  "https://contests.app.splashsports.com/team-pickem/contests/contest_01M1BS28ATFG1F6FERSSZSF1JH/picks?entryId=entry_01M1BVP7NHWX18FGDT88BTED2M";
+
 // ----------------------
 // Helpers for Puppeteer
 // ----------------------
@@ -40,87 +47,148 @@ async function existsVisible(page, selector, timeout = 2000) {
 }
 
 // ----------------------
-// Scraper: OFP base lines
+// Scraper: Splash Sports base lines
 // ----------------------
-async function getOFPBaseLines() {
-  const browser = await puppeteer.launch({
-    headless: false,
-    userDataDir: PUPPETEER_PROFILE,
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  });
+let splashScrapePromise = null; // guards against concurrent Puppeteer launches
 
-  try {
-    const page = await browser.newPage();
-    await page.setViewport({ width: 1366, height: 768 });
+async function getSplashBaseLines() {
+  if (splashScrapePromise) {
+    console.log("Scrape already in progress — reusing existing browser session...");
+    return splashScrapePromise;
+  }
 
-    // Go to picks page
-    await page.goto("https://www.officefootballpool.com/picks.cfm", {
-      waitUntil: "networkidle2",
+  splashScrapePromise = (async () => {
+    const browser = await puppeteer.launch({
+      headless: false,
+      userDataDir: PUPPETEER_PROFILE,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
-    // If not logged in, wait for manual login
-    if (!(await existsVisible(page, ".SPREAD", 1500))) {
-      console.log("Please log in manually in the opened browser...");
-      await waitForEnter("Press Enter after logging in and the pick sheet is visible...");
-    }
+    try {
+      const page = await browser.newPage();
+      await page.setViewport({ width: 1366, height: 768 });
 
-    // Ensure we're on the picks page with the gamerows visible
-    await page.goto("https://www.officefootballpool.com/picks.cfm", {
-      waitUntil: "networkidle2",
-    });
+      // Go to picks page
+      await page.goto(SPLASH_PICKS_URL, {
+        waitUntil: "networkidle2",
+      });
 
-    await page.waitForSelector(".gamerow", { timeout: 20000 });
-
-    const games = await page.evaluate(() => {
-      const rows = [...document.querySelectorAll(".row.gamerow")];
-      const results = [];
-
-      for (let i = 0; i < rows.length; i += 2) {
-        const teamRow = rows[i];
-        const totalRow = rows[i + 1];
-        if (!totalRow) break;
-
-        const teamBoxes = teamRow.querySelectorAll(".col-5, .col-md-4");
-        if (teamBoxes.length < 2) continue;
-
-        const t1 = teamBoxes[0].innerText.trim();
-        const t2 = teamBoxes[1].innerText.trim();
-
-        const s1 = parseFloat(
-          teamBoxes[0].querySelector(".SPREAD")?.innerText
-        );
-        const s2 = parseFloat(
-          teamBoxes[1].querySelector(".SPREAD")?.innerText
-        );
-
-        const totals = totalRow.querySelectorAll(".ouTotal");
-        let oTotal = null;
-
-        if (totals.length > 0) {
-          const match = totals[0].innerText.match(/(\d+(\.\d+)?)/);
-          if (match) oTotal = parseFloat(match[0]);
-        }
-
-        results.push({
-          team1: t1,
-          team2: t2,
-          baseLine: s1,
-          pointTotal: oTotal,
-        });
+      // If not logged in, wait for manual login
+      if (!(await existsVisible(page, '[data-testid^="game-pick-card-"]', 1500))) {
+        console.log("Please log in manually in the opened browser...");
+        await waitForEnter("Press Enter after logging in and the pick sheet is visible...");
       }
 
-      return results;
-    });
+      // Ensure we're on the picks page with the game cards visible
+      await page.goto(SPLASH_PICKS_URL, {
+        waitUntil: "networkidle2",
+      });
 
-    console.log("Scraped OFP games:", games.length);
-    return games;
-  } finally {
-    // Close browser to avoid "browser already running" error next time
-    try {
-      await browser.close();
-    } catch (e) {
-      console.warn("Error closing browser (can usually ignore):", e.message);
+      await page.waitForSelector('[data-testid^="game-pick-card-"]', {
+        timeout: 20000,
+      });
+
+      const games = await page.evaluate(() => {
+        const cards = [...document.querySelectorAll('[data-testid^="game-pick-card-"]')];
+        const results = [];
+
+        for (const card of cards) {
+          const matchupId = card
+            .getAttribute("data-testid")
+            .replace("game-pick-card-", "");
+
+          const header = card.querySelector(
+            `[data-testid="matchup-header-${matchupId}"]`
+          );
+          if (!header) continue;
+
+          // Team spreads live in team-header-spread-{teamId} spans,
+          // in DOM order: [away, home]. The teamId embedded in each
+          // span's data-testid lets us look up the FULL team name
+          // elsewhere in the card (the header only has short codes
+          // like "MASS"/"RUTG", which won't match the team map).
+          const spreadSpans = header.querySelectorAll(
+            '[data-testid^="team-header-spread-"]'
+          );
+
+          if (spreadSpans.length < 2) continue;
+
+          const awayTeamId = spreadSpans[0]
+            .getAttribute("data-testid")
+            .replace("team-header-spread-", "");
+          const homeTeamId = spreadSpans[1]
+            .getAttribute("data-testid")
+            .replace("team-header-spread-", "");
+
+          const awaySpread = parseFloat(spreadSpans[0].textContent.trim());
+          const homeSpread = parseFloat(spreadSpans[1].textContent.trim());
+
+          // Full team names live in the pick-selection buttons
+          // (team-row-{teamId}), e.g. "UMass", "Rutgers" instead of
+          // the header's "MASS"/"RUTG" codes.
+          const awayRow = card.querySelector(
+            `[data-testid="team-row-${awayTeamId}"]`
+          );
+          const homeRow = card.querySelector(
+            `[data-testid="team-row-${homeTeamId}"]`
+          );
+
+          const awayNameSpan = awayRow?.querySelector(
+            ".truncate.text-base.font-bold"
+          );
+          const homeNameSpan = homeRow?.querySelector(
+            ".truncate.text-base.font-bold"
+          );
+
+          const awayTeam = awayNameSpan ? awayNameSpan.textContent.trim() : null;
+          const homeTeam = homeNameSpan ? homeNameSpan.textContent.trim() : null;
+
+          if (!awayTeam || !homeTeam) continue;
+
+          // Over/under total lives in a sibling totals-row within the
+          // same card, keyed by the same matchup id.
+          let pointTotal = null;
+          const totalOverBtn = card.querySelector(
+            `[data-testid="total-over-${matchupId}"]`
+          );
+          if (totalOverBtn) {
+            const spans = totalOverBtn.querySelectorAll("span.shrink-0");
+            const numberSpan = spans[spans.length - 1]; // last span holds the number
+            if (numberSpan) {
+              const match = numberSpan.textContent
+                .trim()
+                .match(/(\d+(\.\d+)?)/);
+              if (match) pointTotal = parseFloat(match[0]);
+            }
+          }
+
+          results.push({
+            team1: awayTeam, // away
+            team2: homeTeam, // home
+            baseLine: awaySpread, // matches old scraper's convention (team1/away spread)
+            pointTotal,
+          });
+        }
+
+        return results;
+      });
+
+      console.log("Scraped Splash Sports games:", games.length);
+      return games;
+    } finally {
+      // Close browser to avoid "browser already running" error next time
+      try {
+        await browser.close();
+      } catch (e) {
+        console.warn("Error closing browser (can usually ignore):", e.message);
+      }
     }
+  })();
+
+  try {
+    return await splashScrapePromise;
+  } finally {
+    splashScrapePromise = null; // release the lock once done (success or failure)
   }
 }
 
@@ -128,25 +196,25 @@ async function getOFPBaseLines() {
 // REST Endpoints
 // ----------------------
 
-// Raw OFP lines (scraper only)
+// Raw Splash Sports lines (scraper only)
 app.get("/api/lines", async (req, res) => {
   try {
-    const data = await getOFPBaseLines();
+    const data = await getSplashBaseLines();
     res.json(data);
   } catch (err) {
     console.error("Scrape Error:", err);
     res.status(500).json({
-      message: "Error scraping OFP lines",
+      message: "Error scraping Splash Sports lines",
       error: String(err),
     });
   }
 });
 
-// Comparison endpoint (OFP vs Odds API)
+// Comparison endpoint (Splash Sports vs Odds API)
 app.get("/api/compare", async (req, res) => {
   try {
-    // compareLines expects getOFPBaseLines as a dependency
-    const data = await compareLines(getOFPBaseLines);
+    // compareLines expects getSplashBaseLines as a dependency
+    const data = await compareLines(getSplashBaseLines);
     res.json(data);
   } catch (err) {
     console.error("Compare Error:", err);
@@ -164,4 +232,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // Export scraper (optional, used if you ever run compareLines directly)
-module.exports = { getOFPBaseLines };
+module.exports = { getSplashBaseLines };

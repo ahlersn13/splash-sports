@@ -25,7 +25,7 @@ function normalizeTeamName(name) {
   if (!name) return "";
   return name
     .replace(/#\d+\s*/g, "")                 // remove rankings (#9)
-    .replace(/\([^)]*\)/g, "")               // remove ANYTHING inside parentheses
+    .replace(/\((\d+)\)/g, "")              // remove ANYTHING inside parentheses
     .replace(/[+–-]\d+(\.\d+)?/g, "")         // remove spreads like +7.5 or -3
     .replace(/\./g, "")                      // remove dots
     .replace(/\s+/g, " ")                    // normalize spaces

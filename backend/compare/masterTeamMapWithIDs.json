@@ -678,11 +678,13 @@
     "league": "NCAA",
     "odds_api_names": [
       "Miami",
-      "Miami Hurricanes"
+      "Miami Hurricanes",
+      "Miami (FL)"
     ],
     "ofp_names": [
       "MIAMI",
-      "MIAMI FLA"
+      "MIAMI FLA",
+      "MIAMI FL"
     ],
     "warnings": []
   },
@@ -718,7 +720,8 @@
     "league": "NCAA",
     "odds_api_names": [
       "Penn State Nittany",
-      "Penn State Nittany Lions"
+      "Penn State Nittany Lions",
+      "Penn State"
     ],
     "ofp_names": [
       "Penn St."
@@ -783,7 +786,7 @@
       "UL Monroe Warhawks"
     ],
     "ofp_names": [
-      "UL MONROE"
+      "UL MONROE", "Louisiana-Monroe"
     ],
     "warnings": []
   },
@@ -956,7 +959,8 @@
     "odds_api_names": [
       "FIU",
       "FIU Panthers",
-      "Florida International Panthers"
+      "Florida International Panthers",
+      "Florida International"
     ],
     "ofp_names": [
       "FIU"
@@ -1452,7 +1456,7 @@
       "Hawaii Rainbow Warriors"
     ],
     "ofp_names": [
-      "Hawaii"
+      "Hawaii", "Hawai'i"
     ],
     "warnings": []
   },
@@ -2066,6 +2070,14 @@
   "ofp_names": [
     "Toledo"
   ],
+  "warnings": []
+},
+
+"170": {
+  "canonical": "Akron Zips",
+  "league": "NCAA",
+  "odds_api_names": ["Akron", "Akron Zips"],
+  "ofp_names": ["AKRON"],
   "warnings": []
 }
 }
