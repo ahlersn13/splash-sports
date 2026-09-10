@@ -358,7 +358,8 @@
     "league": "NCAA",
     "odds_api_names": [
       "Arizona State Sun",
-      "Arizona State Sun Devils"
+      "Arizona State Sun Devils",
+      "Arizona State"
     ],
     "ofp_names": [
       "Arizona St.",
@@ -746,7 +747,8 @@
     "league": "NCAA",
     "odds_api_names": [
       "Middle Tennessee Blue",
-      "Middle Tennessee Blue Raiders"
+      "Middle Tennessee Blue Raiders",
+      "Middle Tennessee"
     ],
     "ofp_names": [
       "Middle Tenn",
@@ -1518,7 +1520,7 @@
       "Miami Dolphins"
     ],
     "ofp_names": [
-      "MIAMI"
+      "MIAMI", "Dolphins"
     ],
     "warnings": []
   },
@@ -1530,7 +1532,7 @@
       "Washington Commanders"
     ],
     "ofp_names": [
-      "Wash"
+      "Wash", "Commanders"
     ],
     "warnings": []
   },
@@ -1723,7 +1725,7 @@
       "Arizona",
       "Arizona Cardinals"
     ],
-    "ofp_names": [],
+    "ofp_names": ["Cardinals"],
     "warnings": [
       "Deliberately left without 'Arizona' to avoid conflict with NCAA Arizona Wildcats."
     ]
@@ -1733,7 +1735,8 @@
     "league": "NFL",
     "odds_api_names": [
       "San Francisco",
-      "San Francisco 49ers"
+      "San Francisco 49ers",
+      "49ers"
     ],
     "ofp_names": [
       "SAN FRANCISCO",
@@ -2078,6 +2081,21 @@
   "league": "NCAA",
   "odds_api_names": ["Akron", "Akron Zips"],
   "ofp_names": ["AKRON"],
+  "warnings": []
+},
+
+"171": {
+  "canonical": "North Dakota State Bison",
+  "league": "NCAA",
+  "odds_api_names": ["North Dakota State", "North Dakota State Bison"],
+  "ofp_names": ["North Dakota State"],
+  "warnings": []
+},
+"172": {
+  "canonical": "Sacramento State Hornets",
+  "league": "NCAA",
+  "odds_api_names": ["Sacramento State", "Sacramento State Hornets"],
+  "ofp_names": ["Sacramento State"],
   "warnings": []
 }
 }

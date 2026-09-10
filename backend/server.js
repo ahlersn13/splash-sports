@@ -67,6 +67,7 @@ async function getSplashBaseLines() {
     try {
       const page = await browser.newPage();
       await page.setViewport({ width: 1366, height: 768 });
+      await page.setCacheEnabled(false);
 
       // Go to picks page
       await page.goto(SPLASH_PICKS_URL, {
@@ -97,53 +98,51 @@ async function getSplashBaseLines() {
             .getAttribute("data-testid")
             .replace("game-pick-card-", "");
 
-          const header = card.querySelector(
-            `[data-testid="matchup-header-${matchupId}"]`
-          );
-          if (!header) continue;
+          // Site update: the header no longer carries a spread badge.
+          // The spread now lives inside each pick button as
+          // team-abbrev-{teamId}, e.g. "OKLA -5.5" / "MICH +5.5".
+          // Team order in winner-picks is still [away, home].
+          const teamRows = [
+            ...card.querySelectorAll('[data-testid^="team-row-"]'),
+          ];
+          if (teamRows.length < 2) continue;
 
-          // Team spreads live in team-header-spread-{teamId} spans,
-          // in DOM order: [away, home]. The teamId embedded in each
-          // span's data-testid lets us look up the FULL team name
-          // elsewhere in the card (the header only has short codes
-          // like "MASS"/"RUTG", which won't match the team map).
-          const spreadSpans = header.querySelectorAll(
-            '[data-testid^="team-header-spread-"]'
-          );
+          const parseRow = (row) => {
+            const teamId = row
+              .getAttribute("data-testid")
+              .replace("team-row-", "");
 
-          if (spreadSpans.length < 2) continue;
+            const nameSpan = row.querySelector(
+              ".truncate.text-base.font-bold"
+            );
+            const team = nameSpan ? nameSpan.textContent.trim() : null;
 
-          const awayTeamId = spreadSpans[0]
-            .getAttribute("data-testid")
-            .replace("team-header-spread-", "");
-          const homeTeamId = spreadSpans[1]
-            .getAttribute("data-testid")
-            .replace("team-header-spread-", "");
+            const abbrevSpan = row.querySelector(
+              `[data-testid="team-abbrev-${teamId}"]`
+            );
+            let spread = null;
+            if (abbrevSpan) {
+              // text like "OKLA -5.5" or "MICH +5.5" — take the
+              // trailing signed number.
+              const match = abbrevSpan.textContent
+                .trim()
+                .match(/(-?\d+(\.\d+)?)\s*$/);
+              if (match) spread = parseFloat(match[1]);
+            }
 
-          const awaySpread = parseFloat(spreadSpans[0].textContent.trim());
-          const homeSpread = parseFloat(spreadSpans[1].textContent.trim());
+            return { team, spread };
+          };
 
-          // Full team names live in the pick-selection buttons
-          // (team-row-{teamId}), e.g. "UMass", "Rutgers" instead of
-          // the header's "MASS"/"RUTG" codes.
-          const awayRow = card.querySelector(
-            `[data-testid="team-row-${awayTeamId}"]`
-          );
-          const homeRow = card.querySelector(
-            `[data-testid="team-row-${homeTeamId}"]`
-          );
+          const away = parseRow(teamRows[0]);
+          const home = parseRow(teamRows[1]);
 
-          const awayNameSpan = awayRow?.querySelector(
-            ".truncate.text-base.font-bold"
-          );
-          const homeNameSpan = homeRow?.querySelector(
-            ".truncate.text-base.font-bold"
-          );
+          if (!away.team || !home.team) continue;
+          if (away.spread === null || home.spread === null) continue;
 
-          const awayTeam = awayNameSpan ? awayNameSpan.textContent.trim() : null;
-          const homeTeam = homeNameSpan ? homeNameSpan.textContent.trim() : null;
-
-          if (!awayTeam || !homeTeam) continue;
+          const awayTeam = away.team;
+          const homeTeam = home.team;
+          const awaySpread = away.spread;
+          const homeSpread = home.spread;
 
           // Over/under total lives in a sibling totals-row within the
           // same card, keyed by the same matchup id.
