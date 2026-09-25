@@ -93,42 +93,55 @@ async function getSplashBaseLines() {
         const cards = [...document.querySelectorAll('[data-testid^="game-pick-card-"]')];
         const results = [];
 
+        // Splash's row/list layout duplicates each number in a hidden
+        // mobile span and a visible desktop span (CSS-toggled, both
+        // present in the DOM at once). There's no dedicated testid for
+        // the spread or total number anymore, so we pull it out of the
+        // button's full text via regex instead.
+        //
+        // Team spread e.g. "+21.5" / "-21.5" — must not match inside a
+        // win-loss record like "2-0", so require the sign not be
+        // preceded by a digit.
+        const SPREAD_RE = /(?<!\d)[+-]\d+(\.\d+)?/;
+        // Total number e.g. "49.5" inside "O 49.5" / "Over 49.5".
+        const NUMBER_RE = /\d+(\.\d+)?/;
+
         for (const card of cards) {
           const matchupId = card
             .getAttribute("data-testid")
             .replace("game-pick-card-", "");
 
-          // Site update: the header no longer carries a spread badge.
-          // The spread now lives inside each pick button as
-          // team-abbrev-{teamId}, e.g. "OKLA -5.5" / "MICH +5.5".
-          // Team order in winner-picks is still [away, home].
           const teamRows = [
             ...card.querySelectorAll('[data-testid^="team-row-"]'),
           ];
           if (teamRows.length < 2) continue;
 
           const parseRow = (row) => {
-            const teamId = row
-              .getAttribute("data-testid")
-              .replace("team-row-", "");
+            // Both the short abbreviation ("NW") and the full name
+            // ("Northwestern") share the classes truncate + font-extrabold
+            // (one for mobile, one for desktop, both present in the DOM).
+            // The full name is the longer of the two.
+            const candidates = [
+              ...row.querySelectorAll(".truncate.font-extrabold"),
+            ]
+              .map((el) => el.textContent.trim())
+              .filter((t) => t.length > 0);
 
-            const nameSpan = row.querySelector(
-              ".truncate.text-base.font-bold"
-            );
-            const team = nameSpan ? nameSpan.textContent.trim() : null;
+            const team = candidates.length
+              ? candidates.reduce((a, b) => (b.length > a.length ? b : a))
+              : null;
 
-            const abbrevSpan = row.querySelector(
-              `[data-testid="team-abbrev-${teamId}"]`
-            );
-            let spread = null;
-            if (abbrevSpan) {
-              // text like "OKLA -5.5" or "MICH +5.5" — take the
-              // trailing signed number.
-              const match = abbrevSpan.textContent
-                .trim()
-                .match(/(-?\d+(\.\d+)?)\s*$/);
-              if (match) spread = parseFloat(match[1]);
-            }
+            // The spread number sits in its own span with a distinct
+            // "font-black" weight class — the record (font-semibold),
+            // rank (font-semibold), and team name (font-extrabold) all
+            // use different classes, so this isolates just the spread
+            // text (e.g. "+21.5") without any adjacent-digit ambiguity
+            // from a win-loss record like "2-0" sitting right next to it.
+            const spreadSpan = row.querySelector(".font-black");
+            const spreadMatch = spreadSpan
+              ? spreadSpan.textContent.match(SPREAD_RE)
+              : null;
+            const spread = spreadMatch ? parseFloat(spreadMatch[0]) : null;
 
             return { team, spread };
           };
@@ -151,14 +164,8 @@ async function getSplashBaseLines() {
             `[data-testid="total-over-${matchupId}"]`
           );
           if (totalOverBtn) {
-            const spans = totalOverBtn.querySelectorAll("span.shrink-0");
-            const numberSpan = spans[spans.length - 1]; // last span holds the number
-            if (numberSpan) {
-              const match = numberSpan.textContent
-                .trim()
-                .match(/(\d+(\.\d+)?)/);
-              if (match) pointTotal = parseFloat(match[0]);
-            }
+            const match = totalOverBtn.textContent.match(NUMBER_RE);
+            if (match) pointTotal = parseFloat(match[0]);
           }
 
           results.push({
